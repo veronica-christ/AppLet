@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import "~bootstrap/dist/css/bootstrap.scss";
+// body{
+//     min-height: 100vh;
+// }
+// /* Importing Bootstrap SCSS file. */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+// .success-snackbar {
+//    background: #5372EB;
+//    margin-top: 70px !important; }
+// .warning-snackbar {   background: #ffae42; }
+// .danger-snackbar {   background: #e90a07; }
+
+.snackbar-container {
+   margin-top: -90% !important;
+   // max-width: 100% !important;
+   // margin-left: 10% !important;
+   max-width: 40%;
+   color: beige;
+   &.error {
+     background-color: #c62828 !important;
+   }
+   &.success {
+     background-color: #2e7d32 !important;
+    margin-left: 60%;
+    max-width: 70% !important;
+   }
+
+   &.warning {
+     background-color: #ffae42 !important;
+   }
+ }
+
+
+
+
+@media screen and (min-width:320px) and (max-width: 480px){
+   .snackbar-container {
+      &.success {
+         background-color: red !important;
+      //   margin-top: 60%;
+         max-width: 60% !important;
+         margin-left: 20%;
+
+       }
+  }
+
+}
+
+

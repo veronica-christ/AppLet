@@ -1,0 +1,57 @@
+
+<body class="background-radial-gradient background">
+  <!-- <section class="background"> -->
+    <div class="col-lg-6 mb-5 mb-lg-0 ">
+      <section class="background-radial-gradient overflow-hidden xs" >
+        <table mdbTable mdbTableScroll scrollx="true" class="table table-sm px">
+          <div class="col-12">
+            <h3>List of Active Surveys</h3>
+            <table
+              mdbTable
+              mdbTableScroll
+              scrollx="true"
+              class="table table-sm tb"
+            >
+              <thead>
+                <tr>
+                  <th class="th-sm p col">Id</th>
+                  <th class="th-sm col">Title</th>
+                  <th class="th-sm col-2">Description</th>
+                  <th class="th-sm col">Status</th>
+                  <th class="th-sm col">Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+              <tr *ngFor="let item of survey; let i = index">
+                <td class="th-sm p col">{{ i + 1 }}</td>
+                <td class="th-sm col">{{ item.title }}</td>
+                <td class="th-sm col-2">{{ item.description }}</td>
+                <td class="th-sm col">{{ item.status }}</td>
+                <td class="th-sm col">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-sm q m-3"
+                      *ngIf="item.status == 'Active'"
+                      (click)="results(item.user_id, item.title)"
+                    >
+                      Results
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm s m-3"
+                      *ngIf="item.status == 'Active'"
+                      (click)="takeSurvey(item.survey_id, item.title)"
+                    >
+                      Survey
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </table>
+      </section>
+    </div>
+  <!-- </section> -->
+</body>

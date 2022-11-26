@@ -1,0 +1,36 @@
+.card-registration .select-input.form-control {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+section div {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 90%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+@media screen and (max-width: 400px) {
+  section div {
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  section div {
+    margin-top: 40px;
+  }
+}

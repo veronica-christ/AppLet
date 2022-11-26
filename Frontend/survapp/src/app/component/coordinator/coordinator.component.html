@@ -1,0 +1,52 @@
+<section class="background">
+  <div class="container col-sm-6 col-md-7 col-lg-7 ">
+    <div class="take">
+      <h5 class="m mt-5 mb-5" style="color: black">
+        Invite respondents to take a survey
+      </h5>
+      <button class="btn btn-lg float-right mt-5 mb-5 n" routerLink="/email" type="invite">
+        Invite
+      </button>
+    </div>
+
+    <div class="col-12 mb-5 mb-lg-0 position-relative">
+     
+      <div class="card bg-glass">
+        <div class="card-body col-12">
+          
+          <table mdbTable mdbTableScroll scrollx="true" class="table table-sm">
+            <thead>
+              <tr class="p">
+                <th class="th-sm p col">Id</th>
+                <th class="th-sm col-2">Title</th>
+                <th class="th-sm col-2">Description</th>
+                <th class="th-sm col">Status</th>
+                <th class="th-sm col">Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tr *ngFor="let item of survey; let i = index">
+              <td class="th-sm p col">{{ i + 1 }}</td>
+              <td class="th-sm col-2">{{ item.title }}</td>
+              <td class="th-sm col-2">{{ item.description }}</td>
+              <td class="th-sm col">{{ item.status }}</td>
+              <td class="th-sm col toka">
+                <div class="col">
+                
+                  <button type="button" class="btn btn-sm s m-2  t" (click)="updateStatus(item.status, item.survey_id)">
+                    change status
+                  </button>
+                  <button type="button" class="btn btn-sm d m-2 t" (click)="delete(item.survey_id)">
+                    Delete
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <button class="btn btn-lg float-right mt-5 mb-5 n" routerLink="/create" >
+        create survey
+      </button>
+    </div>
+  </div>

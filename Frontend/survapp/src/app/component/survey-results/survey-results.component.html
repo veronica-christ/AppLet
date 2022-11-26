@@ -1,0 +1,75 @@
+
+<body class="background-radial-gradient ">
+
+  <section class="background-radial-gradient overflow-hidden">
+    <!-- <div class="container px-4 py-5 px-md-5 text-lg-start my-5">
+      <div class="row "> -->
+
+    <div class="col-lg-6 mb-5 mb-lg-0 position: absolute;">
+      <div class="card bg-glass">
+        <div class="card-body px-4 py-5 px-md-5">
+          <div style="margin: 0 20px">
+            <h2 style="text-align: center">{{showResults[0].title}}</h2>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th colspan="2" >Question</th>
+                  <th>option1</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of showResults[0].results; let i = index ">
+                  <th scope="row">{{i+1}}</th>
+                  <td colspan="2" >question {{i +1}} </td>
+                  <td>{{ showResults[0].results[i] }}</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+      <button
+              type="submit"
+              class="btn btn-primary"
+
+             routerLink="/responded" 
+              style="background-color: #e0c5ac"
+            >
+              Back
+            </button>
+    </div>
+  </section>
+
+</body>
+
+<!--
+<section class="background-radial-gradient overflow-hidden">
+  <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+    <div class="card bg-glass">
+      <div class="card-body px-4 py-5 px-md-5">
+        <div style="margin: 0 30px">
+          <h2 style="text-align: center">Regular HTML Table</h2>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Country</th>
+            </tr>
+            <tr *ngFor="let item of showResults[0].results; let i = index ">
+              <td>{{ showResults[0].survey_id}}</td>
+              <td>{{showResults[0].title }}</td>
+              <td>{{ showResults[0].results[i] }}</td>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

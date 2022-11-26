@@ -1,0 +1,55 @@
+<section class="background">
+  <div class="col-12">
+   
+    <div
+      class="container col-12 col-xl-12 col-sm-12 pr-5 pt-5 justify-content-center"
+    > <h2>Email Respondents</h2>
+      <div class="card bg-glass">
+        <div class="card-body">
+          <form [formGroup]="Form">
+            <div class="form-group col-sm-7 col-xl-4 col-6">
+              <label class="lbl" for="exampleInputEmail1">Enter the link</label>
+              <input
+                type="url"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter link"
+                formControlName="emailbody"
+              />
+              <br />
+            </div>
+
+            <br />
+            <div class="form-group col-sm-7 col-xl-4 col-6">
+              <label class="lbl" for="exampleInputEmail1">Email address</label>
+              <style>
+                .lbl{
+                  font-size: larger;
+                }
+              </style>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                formControlName="email"
+              />
+              <br />
+            </div>
+            <br />
+            <button
+              type="submit"
+              class="btn btn-primary"
+              (click)="sendMail()"
+              style="background-color: #e0c5ac"
+            >
+              +Invite Respondents
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
